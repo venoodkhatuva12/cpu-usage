@@ -49,6 +49,7 @@ sed -i "s/{/'{/g" /opt/disk.sh
 sed -i "s/}/}'/g" /opt/disk.sh
 chmod 755 /opt/disk.sh
 
+cd /etc
 (crontab -l; echo "*/15 * * * * /bin/bash /opt/disk.sh") | crontab -
 (crontab -l; echo "*/15 * * * * /bin/bash /opt/mem.sh") | crontab -
 (crontab -l; echo "*/15 * * * * /bin/bash /opt/cpu.sh") | crontab -
